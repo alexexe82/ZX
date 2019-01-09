@@ -51,7 +51,7 @@ local eventname, _, char, code = event.pull('key_down')
         os.exit()
 	else
 	 term.clear()
-	 print(indexed[i][1]..indexed[i][2])
+	 print(indexed[st][1]..indexed[st][2])
 	 os.sleep(0.5)
 	 local eventname, _, char, code = event.pull('key_down')
      if eventname == 'key_down' then

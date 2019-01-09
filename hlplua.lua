@@ -28,14 +28,14 @@ local indexed = {
 st = 1
 
 function sett()
- term.setCursor(1,3+st)
+ term.setCursor(3,3+st)
  print(">>")
 end
 
 function menu()
  term.clear()
  for i = 1,#indexed do
-  term.setCursor(3,3+i)
+  term.setCursor(7,3+i)
   print (indexed[i][1])
  end
  sett()
@@ -46,7 +46,7 @@ while true do
 local eventname, _, char, code = event.pull('key_down')
     if eventname == 'key_down' then
       if code == keys.enter then
-	   if st == 15 then
+	   if st == 12 then
 	    term.clear()
         os.exit()
 	else

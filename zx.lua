@@ -64,7 +64,7 @@ else
   lf1,lf2,lb1,lb2,lb3,lb4,lb5 = clr.white,clr.black,clr.black,clr.white,clr.black,clr.white,clr.black
 end
 
-local disp()
+local function disp()
 gpu.setBackground(lf1)
 term.clear()
 

@@ -94,7 +94,7 @@ print ("║1 Downloader  ║")
 term.setCursor (xCen-8, yCen-1)
 print ("║2 File Manager║")
 term.setCursor (xCen-8, yCen)
-print ("║              ║")
+print ("║3 Help in Lua ║")
 term.setCursor (xCen-8, yCen+1)
 print ("║0 Console     ║")
 term.setCursor (xCen-8, yCen+2)
@@ -117,6 +117,8 @@ local eventname, _, char, code = event.pull('key_down')
 	   shell.execute("dwnldr.lua")
 	   elseif code == keys.two then
 	   shell.execute("nc.lua")
+	   elseif code == keys.tri then
+	   shell.execute("hlplua.lua")
        end
 	 end
 end

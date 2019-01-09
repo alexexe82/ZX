@@ -64,6 +64,7 @@ else
   lf1,lf2,lb1,lb2,lb3,lb4,lb5 = clr.white,clr.black,clr.black,clr.white,clr.black,clr.white,clr.black
 end
 
+local disp()
 gpu.setBackground(lf1)
 term.clear()
 
@@ -101,7 +102,10 @@ print ("╚══════════════╝")
 term.setCursor (xCen - (string.len(linedwn)/2)-1, yScr)
 print (string.sub(linedwn,1,xScr-7).." 2019")
 shell.execute("cd //")
+end
+
 while true do
+disp()
 local eventname, _, char, code = event.pull('key_down')
     if eventname == 'key_down' then
       if code == keys.nol then

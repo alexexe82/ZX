@@ -22,13 +22,13 @@ local indexed = {
 {""," - "},
 {""," - "},
 {""," - "},
-{"exit"," - "},
 {""," - "},
+{"exit"," - "},
 }
-st = 4
+st = 1
 
 function sett()
- term.setCursor(1,st)
+ term.setCursor(1,3+st)
  print(">>")
 end
 
@@ -52,20 +52,21 @@ local eventname, _, char, code = event.pull('key_down')
 	else
 	 term.clear()
 	 print(indexed[i][1]..indexed[i][2])
+	 os.sleep(0.5)
 	 local eventname, _, char, code = event.pull('key_down')
      if eventname == 'key_down' then
      menu()
 	 end
 	end
 	   elseif code == keys.up then
-	    if st == 4 then
-		 st = 15
+	    if st == 1 then
+		 st = 12
 		else
 		 st = st - 1
 		end
 	   elseif code == keys.down then
-	    if st == 15 then
-		 st = 4
+	    if st == 12 then
+		 st = 1
 		else
 		 st = st + 1
 		end

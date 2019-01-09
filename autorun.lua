@@ -1,0 +1,1 @@
+local success, reason = pcall(loadfile("zx.lua")); if not success then print("Ошибка: " .. tostring(reason)) end
